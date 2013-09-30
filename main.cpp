@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main()
+void test()
 {
     int N = 10;
     heap_queue hq(N);
@@ -21,6 +21,11 @@ int main()
     cout << "update(5, 7)\n";
     hq.update(5, 7);
     hq.print();
+}
+
+int main()
+{
+    test();
 
     return 0;
 }
