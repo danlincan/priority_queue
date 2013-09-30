@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <vector>
 #include <algorithm>
+#include <utility>
 
 class heap_queue
 {
@@ -25,7 +26,9 @@ class heap_queue
 
 public:
     heap_queue(int max_size);
+
     void insert(int k, int v);
+    std::pair<int, int> get(int pos);
     void update(int k, int new_v);
     void print();
     ~heap_queue(void);

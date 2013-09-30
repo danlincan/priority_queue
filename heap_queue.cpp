@@ -63,6 +63,16 @@ void heap_queue::insert(int k, int v)
     up(sz - 1);
 }
 
+std::pair<int, int> heap_queue::get(int pos)
+{
+    if( pos >= N )
+    {
+        printf("Invalid position\n");
+        exit(1);
+    }
+    return std::make_pair(H[pos].k, H[pos].v);
+}
+
 void heap_queue::update(int k, int new_v)
 {
     if( H[ P[k] ].v == new_v )
